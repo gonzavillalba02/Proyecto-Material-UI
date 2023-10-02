@@ -3,6 +3,11 @@ import { Container } from "@mui/material";
 import Typography from "@mui/material/Typography";
 
 function App() {
+
+  const handleSubmit = (valores => {
+    console.log("APPJS: ", valores)
+  })
+
   return (
     <Container 
     component={"section"}
@@ -12,7 +17,7 @@ function App() {
       variant="h3"
       align="center"
       >Formulario registro</Typography>
-      <FormSignUp />
+      <FormSignUp handleSubmit={handleSubmit}/>
     </Container>
   );
 }
